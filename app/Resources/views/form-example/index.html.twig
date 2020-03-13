@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+  <style>
+    .container {
+      margin-top: 40px;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <hr/>
+
+    <h2>Symfony 3 Form Example</h2>
+
+    <hr/>
+
+    {% include ('flash-messages.html.twig') %}
+    <div>
+      {{ form_start(form) }}
+      {{ form_widget(form) }}
+      {{ form_end(form) }}
+    </div>
+  </div>
+{% endblock %}
+
